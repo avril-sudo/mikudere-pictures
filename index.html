@@ -3,122 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Мой сайт с картинкой</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             color: white;
+            min-height: 100vh;
         }
         
         .container {
-            text-align: center;
-            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
             background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
         }
         
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .features {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
-        
-        .feature {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 10px;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
             transition: transform 0.3s;
         }
         
-        .feature:hover {
+        img:hover {
             transform: scale(1.05);
         }
         
-        .feature h3 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🚀 Добро пожаловать!</h1>
-        <p>Это мой первый сайт на GitHub Pages</p>
-        <a href="#" class="button">Начать</a>
+        <h1>🖼️ Моя картинка</h1>
         
-        <div class="features">
-            <div class="feature">
-                <h3>⚡</h3>
-                <p>Быстро</p>
-            </div>
-            <div class="feature">
-                <h3>🎨</h3>
-                <p>Красиво</p>
-            </div>
-            <div class="feature">
-                <h3>🔒</h3>
-                <p>Безопасно</p>
-            </div>
-        </div>
+        <!-- Замени photo.jpg на имя своей картинки -->
+        <img src="photo.jpg" alt="Моя картинка">
+        
+        <p>Это моя первая картинка на GitHub Pages!</p>
     </div>
-    
-    <script>
-        // Простая анимация при загрузке
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.querySelector('.container');
-            container.style.opacity = '0';
-            container.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                container.style.transition = 'all 0.6s ease';
-                container.style.opacity = '1';
-                container.style.transform = 'translateY(0)';
-            }, 100);
-        });
-    </script>
 </body>
 </html>
